@@ -6,11 +6,16 @@
  * a large data set?
  */
 
+/*
+ * NB: Runtime complexity focuses on how much the algorithm
+ * slows down as the input grows larger
+ */
+
 //  O(1): Algorithm runs in constant time
 
-let arr = [];
+let arr = [1, 2, 3];
 
-function printFirst(data) {
+function constantTime(data) {
   console.log(data[0]);
 }
 /**
@@ -18,5 +23,18 @@ function printFirst(data) {
  * therefore this algorithm runs in constant time and the runtime complexity
  * is O(1)
  *  */
+constantTime(arr);
 
-printFirst(arr);
+// O(n): Algorithm falls in linear time
+// This means the cost(how it slows down) of the algorithm grows as the
+// input increases
+let secondarr = [];
+
+function linearTime() {
+  // O(n): where n == the size of the input
+  for (let i = 0; i < secondarr.length; i++) {
+    const element = secondarr[i];
+  }
+}
+
+linearTime();
