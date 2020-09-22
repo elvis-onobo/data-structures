@@ -58,13 +58,14 @@ function twoLoops() {
 }
 
 /**
- * The loops below will increase the cost of the algorithm 
+ * The loops below will increase the cost of the algorithm
  * because the inputs have increased. i.e num and name
- * 
+ *
  * It can be simplified to O(n) since it still increases in linear time.
+ * NB: Simple loops run in linear time
  */
-let numArr = [1, 2, 3],
-let nameArr = [Elvis,Blessing,Faith],
+let numArr = [1, 2, 3];
+let nameArr = [Elvis, Blessing, Faith];
 
 function twoDifferentLoops() {
   // O(n)
@@ -75,5 +76,21 @@ function twoDifferentLoops() {
   // O(n)
   for (let i = 0; i < nameArr.length; i++) {
     const element = nameArr[i];
+  }
+}
+
+/**
+ * QUADRATIC TIME: Nested loops run in quadratic time
+ * This grows slower faster than linear time algorithms
+ *
+ * O(n * n) i.e O(n^2)
+ */
+function quadraticTime() {
+  for (let index = 0; index < firstArray.length; index++) {
+    // First loop: O(n)
+    for (let i = 0; i < firstArray.length; i++) {
+      // Second loop: O(n)
+      console.log(firstArray[index][i]);
+    }
   }
 }
