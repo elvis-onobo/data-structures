@@ -38,3 +38,42 @@ function linearTime() {
 }
 
 linearTime();
+
+/**
+ * In the situation below, the two loops give us O(n) in two places
+ * which can be approximated to O(n). Still a linear growth
+ */
+
+// O(n + n) i.e O(2n) i.e also O(n)
+function twoLoops() {
+  // O(n)
+  for (let i = 0; i < secondarr.length; i++) {
+    const element = secondarr[i];
+  }
+
+  // O(n)
+  for (let i = 0; i < secondarr.length; i++) {
+    const element = secondarr[i];
+  }
+}
+
+/**
+ * The loops below will increase the cost of the algorithm 
+ * because the inputs have increased. i.e num and name
+ * 
+ * It can be simplified to O(n) since it still increases in linear time.
+ */
+let numArr = [1, 2, 3],
+let nameArr = [Elvis,Blessing,Faith],
+
+function twoDifferentLoops() {
+  // O(n)
+  for (let i = 0; i < numArr.length; i++) {
+    const element = numArr[i];
+  }
+
+  // O(n)
+  for (let i = 0; i < nameArr.length; i++) {
+    const element = nameArr[i];
+  }
+}
