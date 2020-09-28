@@ -75,4 +75,31 @@ function mySet() {
     });
     return intersectionSet;
   };
+
+  /**
+   * Return the difference of two sets as a new set
+   *
+   * foreach element of otherSet, if that element doesn't exist in the
+   * firstSet, then add that to the differenceSet
+   */
+  this.difference = function (otherSet) {
+    let differenceSet = new mySet();
+    let firstSet = this.values();
+    firstSet.forEach(function (e) {
+      if (!otherSet.has(e)) {
+        differenceSet.add(e);
+      }
+      return differenceSet;
+    });
+  };
+
+  /**
+   * SUBSET: checksif all the elements of the otherSet are in the firstSet
+   */
+  this.subset = function (otherSet) {
+    let firstSet = this.values();
+    return firstSet.every(function (value) {
+      return otherSet.has(value);
+    });
+  };
 }
