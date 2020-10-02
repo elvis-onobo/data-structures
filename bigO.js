@@ -4,6 +4,12 @@
  *
  * An algorithm may perform well with small data but will it do same with
  * a large data set?
+ *
+ * Rather than checking the time(which is variable), Big O checks the
+ * number of operations(looping, addtion, subtraction etc) the computer
+ * will have to perform as a result of the code
+ *
+ * Big O considers how the runtime grows as the inputs grow
  */
 
 /*
@@ -94,3 +100,20 @@ function quadraticTime() {
     }
   }
 }
+
+/**
+ * LOGARITHMIC TIME: Algorithms that run in logarithmic time are more efficeint
+ * than thos that run in quadratic time and linear time.
+ *
+ * This is because they grow slow to a point then thay start get faster again
+ * Their speed gets better with time
+ *
+ * O(log n)
+ */
+
+/**
+ * EXPONENTIAL TIME: O(2^n)
+ * This is the opposite of logarithmic time because it grows slower very quickly
+ */
+
+//  HOW MUCH SPACE AN ALGORITHM REQUIRES
