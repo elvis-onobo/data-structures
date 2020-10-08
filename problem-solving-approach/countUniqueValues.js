@@ -4,6 +4,7 @@
  * the array, but it will always be sorted
  */
 
+//  This solution is great because its Big O is linear time: O(n)
 function countUniqueValues(arr) {
   if (arr.length === 0) return 0;
 
