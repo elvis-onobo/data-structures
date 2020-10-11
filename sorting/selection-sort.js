@@ -11,12 +11,15 @@ function selectionSort(arr) {
         lowest = j;
       }
     }
-    let temp = arr[i];
-    arr[i] = arr[lowest];
-    arr[lowest] = temp;
+    if (i !== lowest) {
+      let temp = arr[i];
+      arr[i] = arr[lowest];
+      arr[lowest] = temp;
+    }
   }
 
   return arr;
 }
 
 console.log(selectionSort([34, 22, 39, 64, 11, 12, 14, 18, 22]));
+console.log(selectionSort(["e", "l", "v", "i", "s", "g", "h", "q", "A"]));
