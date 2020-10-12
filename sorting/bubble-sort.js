@@ -1,6 +1,8 @@
 /**
  * Bubble sort works by sorting one item against the one right next to it and
  * swaps/switches their position based on the sorting pattern required.
+ *
+ * Generally, it sorts the larger items to the end
  */
 
 function bubbleSort(arr) {
@@ -23,3 +25,4 @@ function bubbleSort(arr) {
 }
 
 console.log(bubbleSort([5, 1, 2, 3, 8, 9]));
+console.log(bubbleSort(["c", "d", "b", "a"]));
