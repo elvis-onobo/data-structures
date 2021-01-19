@@ -6,7 +6,7 @@
  * a large data set?
  *
  * Rather than checking the time(which is variable), Big O checks the
- * number of operations(looping, addtion, subtraction etc) the computer
+ * number of operations(looping, addition, subtraction etc) the computer
  * will have to perform as a result of the code
  *
  * Big O considers how the runtime grows as the inputs grow
@@ -105,7 +105,7 @@ function quadraticTime() {
  * LOGARITHMIC TIME: Algorithms that run in logarithmic time are more efficeint
  * than thos that run in quadratic time and linear time.
  *
- * This is because they grow slow to a point then thay start get faster again
+ * This is because they grow slow to a point then thay start getting faster again
  * Their speed gets better with time
  *
  * O(log n)

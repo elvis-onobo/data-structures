@@ -45,6 +45,8 @@ function sumZero(arr) {
     let sum = arr[left] + arr[right];
     if (sum === 0) {
       // we found our values, return them
+      console.log(`Arr left ${arr[left]} and right ${arr[right]}`);
+      
       return [arr[left], arr[right]];
     } else if (sum > 0) {
       // sum > 0 means right value is bigger than left value.
