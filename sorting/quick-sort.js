@@ -37,4 +37,4 @@ function quickSort(arr, left = 0, right = arr.length - 1 ) {
     return arr
 }
 
-console.log('The sorted array is >>> ', quickSort([4,6,2,1,7,8,10,9]))
+console.log('The sorted array is >>> ', quickSort([4,6,2,1,7,8,10,9])) 

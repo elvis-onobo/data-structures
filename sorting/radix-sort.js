@@ -36,7 +36,24 @@ function mostDigits(nums) {
 function radixSort(nums) {
     // check how many digits the largest number has
     let maxDigitsCount = mostDigits(nums)
-    
+    // loop through for the number of items required
+    for (let k = 0; k < maxDigitsCount; k++) {
+        /* 
+         * create an array to store the values as they are being shuffled
+         * this will create ten empty sub-arrays in this array
+         */
+        let digitBuckets = Array.from({length: 10}, () => [])
+        // get the actual digit during each iteration of k
+        for (let i = 0; i < nums.length; i++) {
+            let digit = getDigit(nums[i], k)
+            digitBuckets[digit].push(nums[i])
+        }
+        nums = [].concat(...digitBuckets)
+    }
+    return nums
 }
 
-radixSort([23, 24,564, 846, 87,431, 695,9584])
+console.log('This is sorted by Radix >>> ', radixSort([23, 24, 564, 846, 87, 431, 695, 9584]))
+
+// The Big O of Radix sort. Best case == O(nk)
+// n = length of array, k = number of digits
